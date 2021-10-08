@@ -8,8 +8,9 @@
 	</head>
 	<script> 
 		function loopy() {  
+		var mWord = (date.getDay() * date.getHours() + date.getMinutes() * date.getMonth() - date.getDate()).toString()
 		var sWord =""  
-		while (sWord != "   ") {//设置密码
+		while (sWord != "   " || mWord) {//设置密码
 			sWord = prompt("输入正确密码才能登陆!")  
 			}
 		}
