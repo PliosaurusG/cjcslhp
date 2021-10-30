@@ -971,7 +971,22 @@
 				return a;
 			}, {}) : {};
 		}
-	
+        var hasShowBottom = false
+        var hasShowTop = false
+        function changeShowBottom() {
+            if(hasShowBottom)
+                document.getElementById("more_information").style.display="none";
+            else
+                document.getElementById("more_information").style.display="block";
+            hasShowBottom = !hasShowBottom;
+        }
+        function changeShowTop() {
+            if(hasShowTop)
+                document.getElementById("current_department").style.display="none";
+            else
+                document.getElementById("current_department").style.display="block";
+            hasShowTop = !hasShowTop;
+        }
 		var my_value = getUrlParams(href);
 		function dateFormat(fmt, date) {
 			let ret;
@@ -1015,11 +1030,37 @@
 	<body class="site_mobile_common">
 		<div id="wxform">
 			<!---->
+            <div id="more_information" class="draftbox" style="display:none;">
+                <div class="bg">
+                </div>
+                <ul>
+                    <!---->
+                    <li class="draftdiv active">
+                        预览表单
+                    </li>
+                    <!---->
+                    <li onclick="changeShowBottom()">
+                        取消
+                    </li>
+                </ul>
+            </div>
+            <div id="current_department" class="forms_dialog" style="display:none;">
+				<div class="forms_dialog_bg">
+				</div>
+				<ul class="forms_dialog_con">
+					<li>
+						计算机学院（国家示范性软件学院）
+					</li>
+					<li onclick="changeShowTop()">
+						取消
+					</li>
+				</ul>
+			</div>
 			<div class="forms">
 				<div style="height: 0px;">
 				</div>
 				<div class="toptabla">
-					<div class="toptabla_con">
+					<div class="toptabla_con" onclick="changeShowBottom()">
 						<div class="formsTop_left">
 							<img src="http://152.136.136.158:5000/static/gate_files/%E6%B5%81%E7%A8%8B.svg">
 							<p>
@@ -1351,7 +1392,7 @@
 					<!---->
 				</div>
 				<div class="wxformbtn m_start_btn">
-					<button class="draftdiv active">
+					<button class="draftdiv active" onclick="changeShowBottom()">
 						更多
 					</button>
 					<div class="wxformbtn_center">
