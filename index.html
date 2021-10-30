@@ -1002,7 +1002,7 @@
 			document.getElementById("student_name").innerHTML = '										' + my_value.name + '										';
 			document.getElementById("student_photo").src = "https://imgservice.bupt.edu.cn/image/1892/378"+my_value.photo+".jpg";
 			document.getElementById("student_time").innerHTML = dateFormat("YYYY-mm-dd HH:MM:SS", new Date());
-			document.getElementById("in_or_out").color = 'green';
+			document.getElementById("in_or_out").style.color = 'green';
 			if (my_value.type == '0') {
 				document.getElementById("Qrcode_11_qrcodecanvas").src = 'green_code_in.png';
 				document.getElementById("in_or_out").innerHTML = '允许入校';
@@ -1023,8 +1023,7 @@
 				<div class="toptabla">
 					<div class="toptabla_con">
 						<div class="formsTop_left">
-							<i class="iconfont iconliucheng1">
-							</i>
+							<img src="http://152.136.136.158:5000/static/gate_files/%E6%B5%81%E7%A8%8B.svg">
 							<p>
 								当前部门：计算机学院（国家示范性软件学院）
 							</p>
@@ -1036,8 +1035,7 @@
 				<div class="toptabla">
 					<div class="toptabla_con">
 						<div class="formsTop_left">
-							<i class="iconfont icon-biaodanyemian">
-							</i>
+							<img src="http://152.136.136.158:5000/static/gate_files/%E8%A1%A8%E5%8D%95.svg">
 							<p class="">
 								请假外出、返校权限查询
 							</p>
