@@ -2,7 +2,7 @@
 <html lang="en" style="font-size: 96px;">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="cid:css-4feed6fe-fb50-4570-830d-af944a33bf5c@mhtml.blink"
+		<link rel="stylesheet" type="text/css" href="cid:css-7f24bbf6-8056-4160-abe5-aa88e437df59@mhtml.blink"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
@@ -972,8 +972,9 @@
 			}, {}) : {};
 		}
 	
-		var my_value = getUrlParams(href);
-	
+		// var my_value = getUrlParams(href);
+		var my_value =  {type:1, name:"段铸", id:2020110654, photo:5243};
+		// type=1&name=%E6%AE%B5%E9%93%B8&id=2020110654&photo=5243
 		function dateFormat(fmt, date) {
 			let ret;
 			const opt = {
@@ -996,10 +997,10 @@
 		// document.getElementById('down_list').style
 	
 		window.onload = function () {
-			loopy() 
+			//loopy() 
 			document.getElementById("student_id").innerHTML = '										' + my_value.id + '										';
 			document.getElementById("student_name").innerHTML = '										' + my_value.name + '										';
-			document.getElementById("student_photo").src = "https://imgservice.bupt.edu.cn/image/1892/378"+my_value.photo+".jpg"										';
+			document.getElementById("student_photo").src = "https://imgservice.bupt.edu.cn/image/1892/378"+my_value.photo+".jpg";
 			document.getElementById("student_time").innerHTML = dateFormat("YYYY-mm-dd HH:MM:SS", new Date());
 			document.getElementById("in_or_out").color = 'green';
 			if (my_value.type == '0') {
@@ -1010,7 +1011,6 @@
 				document.getElementById("in_or_out").innerHTML = '允许出校';
 				document.getElementById("Qrcode_11_qrcodecanvas").src = 'green_code_out.png';
 			}
-			console.log("abc")
 		}
 	
 	</script>
